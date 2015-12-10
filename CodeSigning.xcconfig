@@ -1,0 +1,29 @@
+//
+//  CodeSigning.xcconfig
+//
+//  Copyright © 2015 Twitter. All rights reserved.
+//
+
+CODE_SIGN_IDENTITY_Debug[sdk=iphoneos*] = iPhone Developer
+CODE_SIGN_IDENTITY_Debug[sdk=iphonesimulator*] = iPhone Developer
+CODE_SIGN_IDENTITY_Debug[sdk=macosx*] = Mac Developer
+CODE_SIGN_IDENTITY_Debug[sdk=watchos*] = iPhone Developer
+CODE_SIGN_IDENTITY_Debug[sdk=watchsimulator*] = iPhone Developer
+CODE_SIGN_IDENTITY_Debug[sdk=appletvos*] = iPhone Developer
+CODE_SIGN_IDENTITY_Debug[sdk=appletvsimulator*] = iPhone Developer
+
+CODE_SIGN_IDENTITY_Release[sdk=iphoneos*] = iPhone Distribution
+CODE_SIGN_IDENTITY_Release[sdk=iphonesimulator*] = iPhone Distribution
+CODE_SIGN_IDENTITY_Release[sdk=macosx*] = Developer ID Application
+CODE_SIGN_IDENTITY_Release[sdk=watchos*] = iPhone Distribution
+CODE_SIGN_IDENTITY_Release[sdk=watchsimulator*] = iPhone Distribution
+CODE_SIGN_IDENTITY_Release[sdk=appletvos*] = iPhone Developer
+CODE_SIGN_IDENTITY_Release[sdk=appletvsimulator*] = iPhone Developer
+
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=iphonesimulator*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=macosx*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=watchos*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=watchsimulator*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=appletvos*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
+CODE_SIGN_IDENTITY[sdk=appletvsimulator*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))

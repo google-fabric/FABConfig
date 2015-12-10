@@ -1,0 +1,23 @@
+//
+// XCTest.xcconfig
+//
+// Copyright (c) 2015 Twitter. All rights reserved.
+//
+
+APPLICATION_EXTENSION_API_ONLY = NO
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) TEST=1
+
+INFOPLIST_FILE = $(PRODUCT_NAME)/Info.plist
+
+LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*] = @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*] = @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*] = @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*] = @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = @loader_path/../Frameworks
+
+OTHER_LDFLAGS = $(inherited) -framework XCTest
+
+DEBUG_INFORMATION_FORMAT = dwarf
+
+WRAPPER_EXTENSION = xctest

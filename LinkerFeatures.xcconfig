@@ -1,0 +1,13 @@
+//
+//  LinkerFeatures.xcconfig
+//  CrashlyticsKit
+//
+//  Created by Cory Dolphin on 11/27/15.
+//  Copyright © 2015 Twitter. All rights reserved.
+//
+
+// Explicitly link Foundation to allow CLANG_MODULES_AUTOLINK to be set to NO.
+OTHER_LDFLAGS[sdk=iphone*] = $(inherited) -framework Foundation -framework UIKit
+OTHER_LDFLAGS[sdk=macosx*] = $(inherited) -framework Foundation
+OTHER_LDFLAGS[sdk=watch*] = $(inherited) -framework Foundation -framework WatchKit
+OTHER_LDFLAGS[sdk=appletv*] = $(inherited) -framework Foundation -framework UIKit 

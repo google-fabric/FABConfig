@@ -1,0 +1,18 @@
+//
+// Framework.xcconfig
+//
+// Copyright (c) 2015 Twitter. All rights reserved.
+//
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+ALWAYS_SEARCH_USER_PATHS = NO
+
+TARGETED_DEVICE_FAMILY = 1,2
+
+SKIP_INSTALL = YES
+COPY_PHASE_STRIP = NO
+
+VALIDATE_PRODUCT_Debug = NO
+VALIDATE_PRODUCT_Release = YES
+VALIDATE_PRODUCT = $(VALIDATE_PRODUCT_$(CONFIGURATION))
