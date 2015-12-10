@@ -1,0 +1,9 @@
+//
+// StaticLibrary.xcconfig
+//
+// Copyright (c) 2015 Twitter. All rights reserved.
+//
+
+#include "Target.xcconfig"
+
+EXECUTABLE_PREFIX = lib
