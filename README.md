@@ -16,6 +16,10 @@ Thanks to [@samdmarshall](https://twitter.com/Dirk_Gently) for this [great blog 
 
 ## Target Files
 - Targets/Target: base target definitions useful for all target types
+- Targets/AppTarget: base target definitions useful for application targets
+- Targets/iOS-App: base definitions for iOS apps
+- Targets/OSX-App: base definitions for OSX apps
+- Targets/tvOS-App: base definitions for tvOS apps
 - Targets/XCTest: base for XCTest target
 - Targets/Framework: base for framework targets
 - Targets/StaticLibrary: base for static lib targets
