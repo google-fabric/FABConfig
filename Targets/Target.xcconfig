@@ -4,6 +4,12 @@
 // Copyright (c) 2015 Twitter. All rights reserved.
 //
 
+#include "../vendor/xcconfig/Architectures.xcconfig"
+#include "../vendor/xcconfig/CodeSigning.xcconfig"
+#include "../vendor/xcconfig/CompilerFeatures.xcconfig"
+#include "../vendor/xcconfig/CompilerWarnings.xcconfig"
+#include "../vendor/xcconfig/PreprocessorDefinitions.xcconfig"
+
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 
 ALWAYS_SEARCH_USER_PATHS = NO
