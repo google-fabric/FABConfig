@@ -1,4 +1,4 @@
-# xcconfig
+# FABConfig
 
 This is a collection of xcconfig files that we've found really useful, particularly for cross-platform targets. Enjoy!
 
