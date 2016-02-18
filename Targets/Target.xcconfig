@@ -4,11 +4,10 @@
 // Copyright (c) 2015 Twitter. All rights reserved.
 //
 
-#include "../vendor/xcconfig/Architectures.xcconfig"
-#include "../vendor/xcconfig/CodeSigning.xcconfig"
-#include "../vendor/xcconfig/CompilerFeatures.xcconfig"
-#include "../vendor/xcconfig/CompilerWarnings.xcconfig"
-#include "../vendor/xcconfig/PreprocessorDefinitions.xcconfig"
+#include "../Architectures.xcconfig"
+#include "../CodeSigning.xcconfig"
+#include "../CompilerFeatures.xcconfig"
+#include "../CompilerWarnings.xcconfig"
 
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 
