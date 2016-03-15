@@ -22,8 +22,4 @@ INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
 
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 
-COPY_PHASE_STRIP_Debug = NO
-COPY_PHASE_STRIP_Release = YES
-COPY_PHASE_STRIP = $(COPY_PHASE_STRIP_$(CONFIGURATION))
-
 VERSIONING_SYSTEM = apple-generic
