@@ -23,3 +23,6 @@ INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 
 VERSIONING_SYSTEM = apple-generic
+
+PRIVATE_HEADERS_FOLDER_PATH = $(CONTENTS_FOLDER_PATH)/PrivateHeaders
+PUBLIC_HEADERS_FOLDER_PATH = $(CONTENTS_FOLDER_PATH)/Headers
