@@ -2,7 +2,7 @@
 
 This is a collection of xcconfig files that we've found really useful, particularly for cross-platform targets. Enjoy!
 
-Thanks to [@samdmarshall](https://twitter.com/Dirk_Gently) for this [great blog post](http://pewpewthespells.com/blog/xcconfig_guide.html).
+Thanks to [@samdmarshall](https://twitter.com/queersorceress) for this [great blog post](http://pewpewthespells.com/blog/xcconfig_guide.html).
 
 ## Base Files
 
@@ -12,7 +12,6 @@ Thanks to [@samdmarshall](https://twitter.com/Dirk_Gently) for this [great blog 
 - CompilerFeatures: Optimizations and typical default options for all compilers
 - CompilerWarnings: Default set of warnings for all compilers
 - LinkerFeatures: Set of standard linker flags for all Apple Platforms
-- PreprocessorDefinitions: set of standard preprocessor definitions
 
 ## Target Files
 - Targets/Target: base target definitions useful for all target types
@@ -30,17 +29,12 @@ Don't forget to explicitly delete all default target-level settings. If there ar
 
     // MyTarget.xcconfig
     
-    #include "Architecture.xcconfig"
     #include "Bitcode.xcconfig"
-    #include "CodeSigning.xcconfig"
-    #include "CompilerFeatures.xcconfig"
-    #include "CompilerWarnings.xcconfig"
-    #include "LinkerFeatures.xcconfig"
-    #include "PreprocessorDefinitions.xcconfig"
-    #include "Targets/Target.xcconfig"
     #include "Targets/Framework.xcconfig"
     
     // specialized settings go here...
+    
+    GCC_OPTIMIZATION_LEVEL = s // optimize build configurations (doesn't optimize debug by default)
 
 ## Contributing
 
