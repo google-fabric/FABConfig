@@ -8,6 +8,7 @@
 
 ARCHS = $(ARCHS_STANDARD)
 CODE_SIGN_IDENTITY = iPhone Developer
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
 SDKROOT = iphoneos
 SUPPORTED_PLATFORMS = iphonesimulator iphoneos
 TARGETED_DEVICE_FAMILY = 1,2
