@@ -9,7 +9,9 @@
 #include "../CompilerFeatures.xcconfig"
 #include "../CompilerWarnings.xcconfig"
 
-DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+DEBUG_INFORMATION_FORMAT_Debug = dwarf
+DEBUG_INFORMATION_FORMAT_Release = dwarf-with-dsym
+DEBUG_INFORMATION_FORMAT = $(DEBUG_INFORMATION_FORMAT_$(CONFIGURATION))
 
 ALWAYS_SEARCH_USER_PATHS = NO
 
