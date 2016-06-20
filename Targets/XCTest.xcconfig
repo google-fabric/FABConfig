@@ -8,16 +8,15 @@
 
 APPLICATION_EXTENSION_API_ONLY = NO
 
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) TEST=1
-
-INFOPLIST_FILE = $(PRODUCT_NAME)/Info.plist
-
 LD_RUNPATH_SEARCH_PATHS[sdk=appletv*] = @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*] = @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = @loader_path/../Frameworks
 
-OTHER_LDFLAGS[sdk=*] = $(inherited) -framework XCTest
-
 DEBUG_INFORMATION_FORMAT = dwarf
 
 WRAPPER_EXTENSION = xctest
+
+// The following have [sdk=*] mixed with inherited which essentially appends the settings after anything set in your target's settings/xcconfig.
+// **Note** this does not work if you also use the [sdk=*] qualifier in your settings/xcconfig. This currently works with CocoaPods projects, because their xcconfigs do not use the [sdk=*] qualifiers
+OTHER_LDFLAGS[sdk=*] = $(inherited) -framework XCTest
+GCC_PREPROCESSOR_DEFINITIONS[sdk=*] = $(inherited) TEST=1
