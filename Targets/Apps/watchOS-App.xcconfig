@@ -6,7 +6,6 @@
 
 #include "AppTarget.xcconfig"
 
-ARCHS = $(ARCHS_STANDARD)
 SDKROOT = watchos
 SUPPORTED_PLATFORMS = watchsimulator watchos
 SKIP_INSTALL = YES

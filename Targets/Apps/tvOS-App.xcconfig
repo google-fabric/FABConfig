@@ -6,7 +6,6 @@
 
 #include "AppTarget.xcconfig"
 
-ARCHS = $(ARCHS_STANDARD)
 CODE_SIGN_IDENTITY = iPhone Developer
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
 SDKROOT = appletvos
