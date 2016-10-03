@@ -6,5 +6,7 @@
 
 #include "../Target.xcconfig"
 
+ARCHS = $(ARCHS_STANDARD)
+
 GCC_DYNAMIC_NO_PIC = NO
 SKIP_INSTALL = NO
