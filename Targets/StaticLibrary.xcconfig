@@ -10,3 +10,26 @@ EXECUTABLE_PREFIX = lib
 
 PRIVATE_HEADERS_FOLDER_PATH = PrivateHeaders/${PRODUCT_NAME}
 PUBLIC_HEADERS_FOLDER_PATH = Headers/${PRODUCT_NAME}
+
+// Having CLANG_MODULES_AUTOLINK enabled for a static library
+//  causes the library to have LC_LINKER_OPTION load commands
+//  added to it for any framework/modules that it (or other
+//  libraries it depends on) references; these commands are
+//  added rather optimistically, so often seemingly-
+//  unnecessary frameworks are included, causing trouble
+//  when those frameworks are not available in the version
+//  of Xcode that is being used to build an app that links
+//  in our static framework.
+//
+// For instance, when building an iOS static library in Xcode 8,
+//  a static library might get an LC_LINKER_OPTION for the
+//  Metal.framework; this is fine when builing an app with our
+//  static library in Xcode 8, but will cause linker errors
+//  when building with earlier Xcode versions that don't know
+//  anything about Metal.framework.
+//
+// Unfortunately, this does have the side-effect of disabling
+//  modules auto-link when building the static library, but
+//  there is currently no way to easily work around this
+//  limitation.
+CLANG_MODULES_AUTOLINK = NO
