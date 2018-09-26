@@ -12,7 +12,7 @@ CODE_SIGN_IDENTITY_Debug[sdk=appletv*] = iPhone Developer
 CODE_SIGN_IDENTITY_Release[sdk=iphone*] = iPhone Distribution
 CODE_SIGN_IDENTITY_Release[sdk=macosx*] = Developer ID Application
 CODE_SIGN_IDENTITY_Release[sdk=watch*] = iPhone Distribution
-CODE_SIGN_IDENTITY_Release[sdk=appletv*] = iPhone Developer
+CODE_SIGN_IDENTITY_Release[sdk=appletv*] = iPhone Distribution
 
 CODE_SIGN_IDENTITY[sdk=iphone*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
 CODE_SIGN_IDENTITY[sdk=macosx*] = $(CODE_SIGN_IDENTITY_$(CONFIGURATION))
